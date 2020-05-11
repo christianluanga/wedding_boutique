@@ -1,0 +1,85 @@
+<!--
+    This the markup for a simple wedding dresses and accessories catalogue page build using Boostrap v4. 
+    The page is built using the grid system, there's a total of 3 rows of 4 columns each. The card component 
+    is used to display each item on the page.
+    
+    All images have a class called img-thumbnail rounded, when given to an image the class gives 1px rounded border to the image,
+    Images also have the img-fluid class which makes them iamges responsive meaning the image will grow and shrink responsively 
+    with the container.
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catalogue</title>
+    <link rel="shortcut icon" href="Img/Icon/rings.ico">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/catalogue.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-end">
+            <a href="basket.html" id="go-to-basket-btn" class="btn btn-info mt-3" type="button">
+                Go To Basket
+            </a>
+        </div>
+        <h1 class="text-center mt-3 pb-1 border-bottom">Wedding Dresses and Accessories Catalogue</h1>
+        <!--The section element below encloses the grid system that conatins the images of all items in our catalogue-->
+        <section id='items-gallery'>
+            <div class="row" id="row_1">
+            </div>
+            <div class="row" id="row_2">
+            </div>
+            <div class="row" id="row_3">
+            </div>
+        </section>
+        <!--Ackonwledgement section-->
+        <div class="jumbotron bg-dark text-white mt-5">
+            <div class="text-center">
+                <h4>Acknowledgement</h4>
+                <p>The photos used in this catalogue are all free for use thanks to a group of dedeicated photographers from all over the world.
+                    <br> The table below names a few and their achievement</p>
+            </div>
+            <section id='photographers-table' class='d-flex justify-content-center'>
+
+                <table class="bg-dark text-white table table-bordered table-hover w-75 text-center">
+                    <thead>
+                        <tr>
+                            <th>Photographer</th>
+                            <th>Followers</th>
+                            <th>All time rank</th>
+                            <tbody>
+                                <tr>
+                                    <td>Jonathan Borba</td>
+                                    <td>2812</td>
+                                    <td>140<sup>th</sup></td>
+                                </tr>
+                                <tr>
+                                    <td>Lina Kivaka</td>
+                                    <td>3563</td>
+                                    <td>132<sup>th</sup></td>
+                                </tr>
+                                <tr>
+                                    <td>Ciao Rasende</td>
+                                    <td>516</td>
+                                    <td>82<sup>nd</sup></td>
+                                </tr>
+                            </tbody>
+                        </tr>
+                    </thead>
+                </table>
+            </section>
+        </div>
+        <div class="d-block mb-5 pr-5">
+            <h3 class="text-right"><a style="text-decoration: none; color: white;" href="mailto:info@theweddingdress.co.za">Send us a mail</a></h3>
+        </div>
+    </div>
+
+    <script src="./js/catalogue.js"></script>
+</body>
+
+</html>

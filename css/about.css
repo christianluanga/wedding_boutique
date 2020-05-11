@@ -1,0 +1,44 @@
+/*This file contains the some of the rules used to style the about page. The other style are either added
+inline or from Bootstrap */
+
+body {
+    background-color: rgb(118, 139, 179);
+    font-size: 1.2rem;
+}
+
+section#welcome-section {
+    margin-top: 2%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section#mission-section {
+    background: url('../Img/bg/close-up-photography-of-pink-flowers-1408221.jpg');
+    background-size: cover;
+    height: 20rem;
+}
+
+section#about-section {
+    background-color: hsla(160, 5%, 12%, 0.521);
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+section#service-section {
+    font-family: sans-serif;
+}
+
+section#testimonial-section {
+    font-size: 1rem;
+    font-family: Times, 'Times New Roman', serif;
+}
+
+div.col img {
+    float: right;
+    height: 200px;
+    width: 250px;
+}
+
+div.col img:hover {
+    height: 300px;
+    width: 400px;
+}

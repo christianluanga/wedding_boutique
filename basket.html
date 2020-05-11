@@ -1,0 +1,105 @@
+<!-- this page contains the markup for the nasket page. the page contains a table that contains a row for each item 
+on the basket. and a side table summarizing the basket content  -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <script src="https://kit.fontawesome.com/dc999eb2f6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/basket.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-9 col-md-12">
+                <div class="d-flex justify-content-center">
+                    <table class="mt-4 text-center table table-borderless">
+                        <thead class="bg-dark text-white">
+                            <tr>
+                                <th style="width: 2%;"></th>
+                                <th style="width: 20%;">Item</th>
+                                <th></th>
+                                <th style="width: 13%;">Price</th>
+                                <th style="width: 5%;">Qty</th>
+                                <th style="width: 13%;">Total</th>
+                                <th style="width: 5%;">Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody id="items-details-body">
+                            <tr>
+                                <td colspan="7">Your shopping cart is empty
+                                    <a href="catalogue.html">
+                                        Back to catalogue
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td colspan="6" class="text-right">
+                                    <span id="tfoot-tot"></span>
+                                </td>
+                            </tr>
+                            <!-- <tr>
+                                <td colspan="7">
+                                    <div class="d-flex justify-content-end">
+                                        <a href="shipping.html" id="go-to-shipping-btn" class="w-25 btn btn-info mt-3>
+                                            Checkout
+                                        </a>
+                                    </div>
+                                </td>
+                            </tr> -->
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <div class="h-50 mt-5 d-flex justify-content-center">
+                    <table id="basket-summary" class="h-100 rounded bg-dark text-white table table-borderless">
+                        <thead>
+                            <tr>
+                                <th colspan="2" class="text-center">BASKET SUMMARY</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-bottom">
+                                <td>Items Tot</td>
+                                <td id="items-total">0</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td>Subtot</td>
+                                <td id="paym-summary-subtot">R0</td>
+                            </tr>
+                            <tr class="border-bottom border-top mb-5">
+                                <td>Vat</td>
+                                <td id="vat">R0</td>
+                            </tr>
+                            <tr class="border-bottom border-top mb-5">
+                                <td>TOTAL</td>
+                                <td id="paym-summary-tot">R0</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a href="Shipping.html" id="go-to-basket-btn" class="ml-5 mb-3 mt-2 btn btn-info" type="a">
+                                        Secure Checkout
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <script src="./js/shipping.js"></script> -->
+    <script src="./js/basket.js"></script>
+</body>
+
+</html>
+<!-- <i class="far window-close"></i> -->

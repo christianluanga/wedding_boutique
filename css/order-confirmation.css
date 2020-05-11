@@ -1,0 +1,13 @@
+body {
+    width: 80%;
+    margin: auto;
+}
+
+table>tbody#order-summary-table tr td:nth-child(1) {
+    width: 70%;
+}
+
+table>tbody#order-summary-table tr td:nth-child(2) {
+    width: 30%;
+    text-align: right!important;
+}

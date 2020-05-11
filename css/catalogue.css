@@ -1,0 +1,44 @@
+    /*The file contains the styling rules for the catalogue page. Some other styles are included inline while 
+    or from Bootstrap. The body has 4 different colors applied to it with every color taking 10s on the screen*/
+    
+    body {
+        background-color: rgb(96, 111, 139);
+        animation-name: changeColors;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+    }
+    
+    @keyframes changeColors {
+        from {
+            background-color: rgb(96, 111, 139);
+        }
+        to {
+            background-color: turquoise;
+        }
+        to {
+            background-color: thistle;
+        }
+        to {
+            background-color: tomato;
+        }
+    }
+    
+    div.card img {
+        height: auto;
+        padding: .5rem;
+        width: 80%;
+    }
+    
+    div.card img:hover {
+        width: 100%;
+    }
+    
+    div.card .btn:hover {
+        border: .05rem solid black;
+        background-color: white;
+        color: chocolate;
+    }
+    
+    div.card-body {
+        box-shadow: 10px 10px grey !important;
+    }

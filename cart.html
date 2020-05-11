@@ -1,0 +1,47 @@
+<!-- This is the page containing the markup for each item. this is called when an item is clicked from the catalogue
+page. This page contains all the details about the item such as the image, price, description and any discount
+that might n=be applied to the item -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Img/Icon/rings.ico">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/cart.css">
+    <title>Item Details Page</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="d-flex justify-content-end">
+            Total item:
+            <span class="pl-2">
+                <a href="basket.html" id="total-item" class="btn mt-0 pt-0" type="button">
+                </a>
+            </span>
+        </div>
+        <h1 id="item-title">Title</h1>
+        <div class="row">
+            <div class="col">
+                <img id="item-image" style="float: left;" src="" alt="" class="mr-5 w-50 h-100 img-fluid img-thumbnail">
+                <p id="item-description"></p>
+                <hr style="margin-left: 55%; margin-right: 3%;">
+                <h5 class="d-block" id="item-price"><span></span><span class="ml-2"></span></h5>
+                <h5 id="item-discount"></h5>
+                <button id="add-to-cart" class="btn btn-primary btn-sm mt-5 mr-5" type="button">Add to chart</button>
+                <a class="btn btn-info btn-sm mt-5 ml-5" href="./catalogue.html">Back to catalogue</a>
+            </div>
+        </div>
+        <div class="d-flex justify-content-end">
+            <a href="basket.html" id="checkout-btn" class="btn btn-success mt-5" type="button">
+                Go to basket
+            </a>
+        </div>
+    </div>
+</body>
+<script src="./js/cart.js"></script>
+
+</html>

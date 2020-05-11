@@ -1,0 +1,100 @@
+<!--The html file contains the markup for the about page. The page contains 4 section with the Bootstrap 
+jumbotron class which creates blocks that stand out from the main content of the page. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="shortcut icon" href="Img/Icon/rings.ico">
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js" integrity="sha256-xNzN2a4ltkB44Mc/Jz3pT4iU1cmeR0FkXs4pru/JxaQ=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/about.css">
+</head>
+
+<body>
+    <h1 style="font-family: Georgia, 'Times New Roman', Times, serif;" class="m-2 text-center text-white">
+        Who we are
+    </h1>
+    <!--Mission section. This section renders a section with roses image in the background and a mission statement-->
+    <section id="mission-section" class="text-center text-white jumbotron m-4">
+        <h2>Our Mission</h2>
+        <p class="lead" style="font-size: 1.5rem;">
+            Our mission is to make every wedding memorable in the best way we know how,<br> that is by providing the newlyweds the best wear and apparel money can buy at an affordable price.
+        </p>
+    </section>
+    <!--This section contains a few paragraphs describing who the Wedding Boutique owners are and where they stated-->
+    <section id="about-section" class="jumbotron text-white text-center m-4 p-2">
+        <h2>About us</h2>
+        <p>
+            We are a group of 8 all united by our love and passion for making the most memorable day in every couple's day even more special.
+            <br>We started as a general decoration company a few ago but we soon reliased that our passion was about wedding days and everything
+            <br>that goes with it hence we decided to concentrate our energy and time to wedding decoration exclusively.
+        </p>
+        <p>After many years of providing our service as a wedding decoration company, 5 years ago we turned our attention to an even more
+            <br>important aspect of the wedding, dressing the newlyweds along with the bridemaids and bestmen.
+        </p>
+        <p>Scroll down to see what some of our clients had to say about our services</p>
+    </section>
+    <!--The section contains all the services offered by the wedding boutique using a ul inside an ol-->
+    <section id="service-section" class="jumbotron ml-4 mr-4 p-5 pb-2 bg-dark text-white">
+        <p>We offer the following services directly or indirectly through our vast network of like minded companies</p>
+        <ol style="list-style:upper-roman;">
+            <li>Wedding design</li>
+            <li>Wedding Dresses and Suits
+                <ul>
+                    <li>For Sale</li>
+                    <li>And on Loan</li>
+                </ul>
+            </li>
+            <li>Party Venues</li>
+            <li>Decoration</li>
+        </ol>
+    </section>
+    <!--This section contains 2 testimonies from the boutique's past clients-->
+    <section id="testimonial-section" class="jumbotron bg-dark ml-4 mr-4 text-left text-white">
+        <h4 class="text-center">Testimonials</h4>
+        <div class="row">
+            <div class="col">
+                <strong><em><h5>From L Charles</h5></em></strong>
+                <p class="pl-5"><img src="./Img/other/charles-couple.jpg" class="rounded-circle" alt="couple charles"> This testimony is from the Charles' couple. 3 weeks ago it was our wedding day and one of our friends referred us
+                    <br> to the wedding boutique and I got to say I was impressed by the level of professionalism with which they offer their
+                    <br> services, we sent an email out with our requirements and they replied the sameday and set up an appointment within
+                    <br> a week and when we met they had reviewed our requirements and came up with options for venues, catring services,
+                    <br> dressing and even things we didn't include in our initial request for service. They promised to make our day more
+                    <br>special and memorable and they did. I would recommend their services to anyone without hesitating for a second.
+                </p>
+                <p>from TWB: thanks alot Mr. and Mrs. Charles glad we were able to make your special day grander and memeorable.</p>
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col">
+                <strong><em><h5>From Gedeon</h5></em></strong>
+                <p class="pl-5"><img src="./Img/other/gedeon-couple.jpg" class="rounded-circle" alt="couple Gedeon"> I got applaud the quality of services we received from the Wedding Boutique especially given that they only had a few
+                    <br>weeks to put a plan together and execute it. Something that many companies in the same industry could not do with
+                    <br> months of preparation.
+                </p>
+                <p>
+                    from TWB: thank you so much sir Gedeon, TWB vowed to go to all extremes in order to make every wedding a success.
+                </p>
+            </div>
+        </div>
+    </section>
+    <!--Footer section-->
+    <section id="footer-section" class="text-center text-white mb-3">
+        <h4>Sign to receive our Newsletter</h4>
+        <p class="lead">Choose one or more of the options below if you'd like to receive our monthly newletter</p>
+        <div class="form-grop">
+            Email <input type="checkbox" name="email-chbx" class="input-control"> SMS
+            <input type="checkbox" name="sms-chbx" class="input-control"> Post
+            <input type="checkbox" name="post-chbx" class="input-control">
+        </div>
+        <div class="mt-3">&copy;The Wedding Boutique find us
+            <a style="text-decoration: none;" href="https://www.google.com/maps/place/Canal+Walk+Shopping+Centre/@-33.8944658,18.5106174,16z/data=!4m8!1m2!2m1!1scanal+walk+shopping+centre!3m4!1s0x0:0x9f5bb7491ff8dca8!8m2!3d-33.8929992!4d18.5117242">Here</a>
+        </div>
+    </section>
+</body>
+
+</html>

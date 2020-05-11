@@ -1,0 +1,181 @@
+<!--This file contains the markup used to render the shipping page. The page contains a form 
+    for getting the shipping details and also displays the order payment summary-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="shipping-viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shipping</title>
+    <link rel="shortcut icon" href="Img/Icon/rings.ico">
+    <script src="https://kit.fontawesome.com/dc999eb2f6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="CSS/shipping.css">
+</head>
+
+<body>
+    <div class="container">
+        <!--Shipping info section-->
+        <div class="row">
+            <div class="col-9">
+                <section id="shipping-info">
+                    <h1 class="m-4">Shipping information</h1>
+                    <div class="jumbotron mt-3 bg-dark text-white">
+                        <form id='shipping-info-form'>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="shipping-input-name">Name</label>
+                                    <input name="shipping-name" type="text" placeholder="John" class="form-control form-control-sm" id="shipping-input-name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="shipping-input-surname">Surname</label>
+                                    <input name="shipping-surname" type="text" placeholder="Doe" class="form-control form-control-sm" id="shipping-input-surname">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="shipping-input-email">Email</label>
+                                    <input name="shipping-email" type="email" placeholder="example@.com" class="form-control form-control-sm" id="shipping-input-email">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="shipping-input-phone">Phone</label>
+                                    <input name="shipping-phone" type="tel" placeholder="+27 789512255" class="form-control form-control-sm" id="shipping-input-phone">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="shipping-input-address">Address</label>
+                                <input name="shipping-address" type="text" class="form-control form-control-sm" id="shipping-input-address" placeholder="1234 Main St, CPT">
+                            </div>
+                            <div class="form-group">
+                                <label for="shipping-input-address2">Address 2</label>
+                                <input name="shipping-address2" type="text" class="form-control form-control-sm" id="shipping-input-address2" placeholder="Apartment, studio, or floor">
+                            </div>
+                            <div class="form-group">
+                                <label for="shipping-input-city">City</label>
+                                <input name="shipping-city" type="text" class="form-control form-control-sm" id="shipping-input-city">
+                            </div>
+                            <div class="form-group d-flex">
+                                <div class="form-check">
+                                    <input class="form-check-input" checked data-option="col" name="delivery-collection" type="radio" data-deliveryMethod="sameday" id="option-sameday">
+                                    <label class="form-check-label" for="option-sameday">
+                                        Collection
+                                    </label>
+                                </div>
+                                <div class="form-check ml-2 ">
+                                    <input class="form-check-input" data-option="del" name="delivery-collection" type="radio" data-deliveryMethod="sameday" id="option-sameday">
+                                    <label class="form-check-label" for="option-sameday">
+                                        Delivery
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group d-none" id="shipping-options">
+                                <p class="mb-1">Please select your prefered delivery option</p>
+                                <div class="d-flex">
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="shipping-method" type="radio" data-deliveryMethod="sameday" id="option-sameday">
+                                        <label class="form-check-label" for="option-sameday">
+                                                Same Day 
+                                            </label>
+                                    </div>
+                                    <div class="form-check ml-2 mr-2">
+                                        <input class="form-check-input" name="shipping-method" data-deliveryMethod="3-5days" type="radio" id="option3-5days">
+                                        <label class="form-check-label" for="option3-5days">
+                                                3-5 Days 
+                                            </label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input class="form-check-input" name="shipping-method" checked data-deliveryMethod="standard" type="radio" id="option-standard">
+                                        <label class="form-check-label" for="option-standard">
+                                                Standard 
+                                            </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <p class="lead mt-4">
+                            Please note that the order for same day delivery must be confirmed by 11pm and there's a service fee of <strong>R300</strong> regardless of the package size and weight. 3-5 working days delivery service carries an additional
+                            fee of <strong>R150</strong>
+                        </p>
+                    </div>
+                </section>
+            </div>
+            <div class="col-3" style="padding-top:8%">
+                <div class="mt-4 d-flex justify-content-center  border border-secondary">
+                    <table id="payment-summary" class="h-100 rounded bg-white text-dark table table-borderless">
+                        <thead>
+                            <tr>
+                                <th colspan="2">PAYMENT SUMMARY</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr class="border-bottom">
+                                <td style="width:55%">Items Tot</td>
+                                <td style="width:45%" id="items-total">0</td>
+                            </tr>
+                            <tr class="border-bottom">
+                                <td>Subtot</td>
+                                <td id="paym-summary-subtot">R0</td>
+                            </tr>
+                            <tr>
+                                <td>Apply coupon ?
+                                </td>
+                                <td>
+                                    <button class="btn" id="coupon-expand-btn"><i class="fas fa-plus"></i></button>
+                                </td>
+                            </tr>
+                            <tr id="coupon-controls">
+                                <td class="d-none">
+                                    <div class="d-flex">
+                                        <input id="user-coupon" type="text" class="mt-0 form-control form-control-sm">
+                                        <i id="coupon-explaination" class="ml-2 mt-1 fas fa-question"></i>
+                                    </div>
+                                </td>
+                                <td class="d-none">
+                                    <button id="coupon-apply-btn" class="btn btn-info">Apply</button>
+                                </td>
+                            </tr>
+                            <tr class="d-none" id='coupon-alert'>
+                                <td colspan="2">
+                                    <div class="alert" role="alert">
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr class="d-none" id="discount-row">
+                                <td>
+                                    Discount
+                                </td>
+                                <td></td>
+                            </tr>
+                            <tr id="delivery-fees-row">
+                                <td>
+                                    Delivery fees
+                                </td>
+                                <td id="delivery-fees-td"><strong>R0</strong></td>
+                            </tr>
+                            <tr class="border-bottom border-top mb-5">
+                                <td>Vat</td>
+                                <td id="vat"></td>
+                            </tr>
+                            <tr class="border-bottom border-top mb-5">
+                                <td>TOTAL</td>
+                                <td id="paym-summary-tot"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <a href="order-confirmation.html" id="order-confirmation" class="ml-5 btn btn-info mt-5" type="a">
+                                        Confirm Order
+                                    </a>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./js/shipping.js"></script>
+</body>
+
+</html>

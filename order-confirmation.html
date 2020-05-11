@@ -1,0 +1,61 @@
+<!-- This page will serve as the confirmation page, in this page a message will be displayed to the user 
+to thamk them and give them a their order reference number and a link back to the catalogue page. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <script src="https://kit.fontawesome.com/dc999eb2f6.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/order-confirmation.css">
+</head>
+
+<body>
+    <div class="container mt-5">
+        <div class="alert alert-success" role="alert">
+            <h1>Order Confirmation</h1>
+            <p>Order successful , dear <span id="name"></span> thank you for shopping with us, we hope to see again soon ...</p>
+            <p>Your order number is
+                <strong>
+                    <span id="order-reference" style="font-size: large;" class="text-dark order-no">
+                    </span>
+                </strong> please keep this number for your reference and use for any queries related to this order
+            </p>
+        </div>
+        <section class="d-flex justify-content-center" id="order-summary-section">
+            <table style="width: 40%;" class="table-borderless">
+                <thead class="text-center">
+                    <tr>
+                        <th colspan="2">
+                            Order summary
+                        </th>
+                    </tr>
+                </thead>
+                <tbody class="pt-3" id="order-summary-table">
+                </tbody>
+                <tfoot>
+                    <tr class="pt-5">
+                        <td colspan="2" id="totals-row" style="text-align: right;">
+                            <br>
+                            <span id="subtotal-span">1</span><br>
+                            <span id="vat-span">2</span><br>
+                            <span id="total-span"></span>
+                        </td>
+                    </tr>
+                </tfoot>
+            </table>
+        </section>
+        <div class="d-flex justify-content-end">
+            <a href="catalogue.html" id="back-to-catalogue-btn" class="btn mt-3">
+               Continue shopping
+            </a>
+        </div>
+    </div>
+    <script src="./js/order-confirmation.js"></script>
+</body>
+
+</html>
